@@ -26,7 +26,6 @@ The lab is designed to simulate a real-world company hierarchy:
     * 🤝 **HR** (Onboarding/Offboarding simulation)
 
 ## 📸 Progress Screenshots
-*(Tip: Upload your screenshots to a folder named /img in your repo and link them here)*
 ![Server Login Screen](./img/login_screen.png)
 
 ## 💡 Key Learnings
