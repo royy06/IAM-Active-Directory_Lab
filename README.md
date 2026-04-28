@@ -24,7 +24,10 @@ This project demonstrates the end-to-end deployment of a Windows Server-based id
 ### Step 2: AD DS Installation & Forest Promotion
 * **The Action:** Installed the Active Directory Domain Services role and promoted the server to a Domain Controller for the `IAMLAB.local` forest.
 * **The "Why":** Promoting the server creates the NTDS database, which acts as the centralized "brain" for all user identities and security permissions in the network.
-[screenshots/Log in Photo.png]
+
+![Log in Photo](screenshots/Log%20in%20Photo.png)
+
+
 ---
 
 ## 👤 Phase 2: Identity & Access Management (IAM)
@@ -32,7 +35,10 @@ This project demonstrates the end-to-end deployment of a Windows Server-based id
 ### Step 3: Organizational Unit (OU) Design
 * **The Action:** Designed a departmental hierarchy by creating OUs for `_Employees`, `HR`, `IT`, and `Finance`.
 * **The "Why":** Proper OU design allows for "Delegated Administration." It enables us to apply specific security rules (GPOs) to one department without affecting others.
-* **[ADD YOUR PHOTO OF THE FOLDER TREE/OU STRUCTURE HERE]**
+
+![OU Structure](screenshots/OU%20structure.png)
+
+
 
 ### Step 4: User Provisioning & RBAC
 * **The Action:** Created a test user (`John Doe`) and mapped them to a specific Security Group: `HR_Staff_SG`.
