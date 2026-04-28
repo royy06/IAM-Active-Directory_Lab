@@ -47,6 +47,8 @@ This project demonstrates the end-to-end deployment of a Windows Server-based id
 ![John Doe RBAC](screenshots/John%20inside%20security%20group.png)
 
 
+
+
 ---
 
 ## 🔐 Phase 3: Security Governance & Data Protection
