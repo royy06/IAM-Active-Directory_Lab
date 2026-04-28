@@ -58,7 +58,7 @@ This project demonstrates the end-to-end deployment of a Windows Server-based id
 * **The Action:** Used the Group Policy Management Console (GPMC) to enforce a **12-character minimum password length** domain-wide.
 * **The "Why":** Centralized governance ensures that every user, regardless of department, follows company security standards to prevent "brute force" password attacks.
 
-![Folder Security](screenshots/folder%20security%20tab.png)
+![Password Policy](screenshots/password%20policy.png)
 
 
 
@@ -66,8 +66,8 @@ This project demonstrates the end-to-end deployment of a Windows Server-based id
 * **The Action:** Created a folder (`HR_Private`) and modified the security ACLs to grant "Modify" access only to the `HR_Staff_SG` group.
 * **The "Why":** This implements the **Principle of Least Privilege**. Only users who *need* access to HR data for their jobs can see it; everyone else (including IT admins, ideally) is locked out.
 
-![Password Policy](screenshots/password%20policy.png)
 
+![Folder Security](screenshots/folder%20security%20tab.png)
 
 ---
 
