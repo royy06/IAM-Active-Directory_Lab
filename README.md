@@ -55,7 +55,7 @@ This project demonstrates the end-to-end deployment of a Windows Server-based id
 ## 🔐 Phase 3: Security Governance & Data Protection
 
 ### Step 5: Enforcing Security Baselines (Group Policy)
-* **The Action:** Used the Group Policy Management Console (GPMC) to enforce a **12-character minimum password length** domain-wide.
+* **The Action:** Used the Group Policy Management Console (GPMC) to enforce a **7-character minimum password length** domain-wide.
 * **The "Why":** Centralized governance ensures that every user, regardless of department, follows company security standards to prevent "brute force" password attacks.
 
 ![Password Policy](screenshots/password%20policy.png)
