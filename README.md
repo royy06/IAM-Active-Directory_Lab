@@ -44,7 +44,8 @@ This project demonstrates the end-to-end deployment of a Windows Server-based id
 * **The Action:** Created a test user (`John Doe`) and mapped them to a specific Security Group: `HR_Staff_SG`.
 * **The "Why":** This follows **Role-Based Access Control (RBAC)**. Instead of giving John Doe individual permissions, we give the *Group* permissions. This makes it easier to "offboard" users or change permissions for entire departments instantly.
 
-![John Doe RBAC](screenshots/John%20inside%20security%20group.png)
+![User inside security group](screenshots/User%20inside%20security%20group.png)
+
 
 
 
@@ -57,14 +58,15 @@ This project demonstrates the end-to-end deployment of a Windows Server-based id
 * **The Action:** Used the Group Policy Management Console (GPMC) to enforce a **12-character minimum password length** domain-wide.
 * **The "Why":** Centralized governance ensures that every user, regardless of department, follows company security standards to prevent "brute force" password attacks.
 
-![Folder Security](screenshots/Folder%20security%20tab.png)
+![Folder Security](screenshots/folder%20security%20tab.png)
+
 
 
 ### Step 6: NTFS Permissions (Least Privilege)
 * **The Action:** Created a folder (`HR_Private`) and modified the security ACLs to grant "Modify" access only to the `HR_Staff_SG` group.
 * **The "Why":** This implements the **Principle of Least Privilege**. Only users who *need* access to HR data for their jobs can see it; everyone else (including IT admins, ideally) is locked out.
 
-![Password Policy](screenshots/Password%20policy.png)
+![Password Policy](screenshots/password%20policy.png)
 
 
 ---
