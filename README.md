@@ -16,7 +16,9 @@ This project demonstrates the end-to-end deployment of a Windows Server-based id
 ### Step 1: Server Provisioning & Static IP
 * **The Action:** Configured Windows Server 2019 with a static IP address (`172.16.0.10`) and renamed the host to `DC01`.
 * **The "Why":** Domain Controllers must have a static IP to ensure that DNS services and authentication requests from client machines never lose their connection to the server.
-* **[ADD YOUR STATIC IP PHOTO HERE]**
+![Static IP Address](screenshots/Static%20IP%20Address.png)
+
+
 
 ### Step 2: AD DS Installation & Forest Promotion
 * **The Action:** Installed the Active Directory Domain Services role and promoted the server to a Domain Controller for the `IAMLAB.local` forest.
