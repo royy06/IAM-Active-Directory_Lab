@@ -1,17 +1,17 @@
 # IAM-Active-Directory_Lab
-# 🛡️ Enterprise Active Directory & IAM Home Lab
+# Enterprise Active Directory & IAM Home Lab
 **Role Simulation:** Junior Identity & Access Management (IAM) Administrator  
 **Location:** Houston, TX (Lab Environment)  
 **Tools:** Windows Server 2019, Oracle VirtualBox, Active Directory Domain Services (AD DS)
 
 ---
 
-## 📋 Project Overview
+## Project Overview
 This project demonstrates the end-to-end deployment of a Windows Server-based identity environment. I transitioned a standalone server into a Domain Controller, established a scalable Organizational Unit (OU) structure, and implemented security best practices including Role-Based Access Control (RBAC) and Group Policy governance.
 
 ---
 
-## 🛠️ Phase 1: Infrastructure & Domain Setup
+## Phase 1: Infrastructure & Domain Setup
 
 ### Step 1: Server Provisioning & Static IP
 * **The Action:** Configured Windows Server 2019 with a static IP address (`172.16.0.10`) and renamed the host to `DC01`.
@@ -30,7 +30,7 @@ This project demonstrates the end-to-end deployment of a Windows Server-based id
 
 ---
 
-## 👤 Phase 2: Identity & Access Management (IAM)
+## Phase 2: Identity & Access Management (IAM)
 
 ### Step 3: Organizational Unit (OU) Design
 * **The Action:** Designed a departmental hierarchy by creating OUs for `_Employees`, `HR`, `IT`, and `Finance`.
@@ -52,7 +52,7 @@ This project demonstrates the end-to-end deployment of a Windows Server-based id
 
 ---
 
-## 🔐 Phase 3: Security Governance & Data Protection
+## Phase 3: Security Governance & Data Protection
 
 ### Step 5: Enforcing Security Baselines (Group Policy)
 * **The Action:** Used the Group Policy Management Console (GPMC) to enforce a **7-character minimum password length** domain-wide.
@@ -71,7 +71,7 @@ This project demonstrates the end-to-end deployment of a Windows Server-based id
 
 ---
 
-## 🎯 Key Takeaways for Interviewers
+## Key Takeaways for Interviewers
 * **Identity Lifecycle:** I can manage the "Joiner-Mover-Leaver" process by provisioning users and managing groups.
 * **Security First:** I understand how to enforce global security rules using Group Policy.
 * **Data Integrity:** I know how to secure sensitive corporate data using NTFS permissions and group-based access.
