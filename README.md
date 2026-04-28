@@ -21,7 +21,7 @@ This project demonstrates the end-to-end deployment of a Windows Server-based id
 ### Step 2: AD DS Installation & Forest Promotion
 * **The Action:** Installed the Active Directory Domain Services role and promoted the server to a Domain Controller for the `IAMLAB.local` forest.
 * **The "Why":** Promoting the server creates the NTDS database, which acts as the centralized "brain" for all user identities and security permissions in the network.
-screenshots/Log in Photo.png
+[screenshots/Log in Photo.png]
 ---
 
 ## 👤 Phase 2: Identity & Access Management (IAM)
