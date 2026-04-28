@@ -1,35 +1,60 @@
 # IAM-Active-Directory_Lab
-# Windows Server 2019 IAM & Active Directory Lab
+# 🛡️ Enterprise Active Directory & IAM Home Lab
+**Role Simulation:** Junior Identity & Access Management (IAM) Administrator  
+**Location:** Houston, TX (Lab Environment)  
+**Tools:** Windows Server 2019, Oracle VirtualBox, Active Directory Domain Services (AD DS)
 
-## 📌 Project Overview
-This project demonstrates the setup and configuration of a Windows Server 2019 environment within a VirtualBox virtual machine. The goal of this lab is to simulate a corporate infrastructure focusing on Identity and Access Management (IAM), Active Directory Domain Services (AD DS), and Organizational Unit (OU) structures for departments like HR, IT, and Finance.
+---
 
-## 🛠 Tech Stack
-* **Hypervisor:** Oracle VirtualBox
-* **Operating System:** Windows Server 2019 Standard (Desktop Experience)
-* **Services:** Active Directory Domain Services (AD DS), DNS
+## 📋 Project Overview
+This project demonstrates the end-to-end deployment of a Windows Server-based identity environment. I transitioned a standalone server into a Domain Controller, established a scalable Organizational Unit (OU) structure, and implemented security best practices including Role-Based Access Control (RBAC) and Group Policy governance.
 
-## 🚀 Phase 1: Virtual Environment Setup
-1.  **Virtual Machine Configuration:** * Name: `DC01-IAMLAB`
-    * RAM: 4GB
-    * CPU: 2 Cores
-    * Storage: 50GB VDI (Dynamically Allocated)
-2.  **Hardware Optimization:** Enabled **VT-x (Virtualization Technology)** in the physical host BIOS to support 64-bit virtualization.
-3.  **OS Installation:** Performed a clean manual installation of Windows Server 2019 using an ISO image, specifically selecting the **Desktop Experience** to allow for GUI management.
+---
 
-## 📁 Active Directory Structure (Planned)
-The lab is designed to simulate a real-world company hierarchy:
-* **Root Domain:** `IAMLAB.local` (Planned)
-* **Organizational Units (OUs):**
-    * 🏢 **Finance** (Users, Groups, Permissions)
-    * 👨‍💻 **IT** (Administrative accounts)
-    * 🤝 **HR** (Onboarding/Offboarding simulation)
+## 🛠️ Phase 1: Infrastructure & Domain Setup
 
-## 📸 Progress Screenshots
-![Server Login Screen](./img/login_screen.png)
+### Step 1: Server Provisioning & Static IP
+* **The Action:** Configured Windows Server 2019 with a static IP address (`172.16.0.10`) and renamed the host to `DC01`.
+* **The "Why":** Domain Controllers must have a static IP to ensure that DNS services and authentication requests from client machines never lose their connection to the server.
+* **[ADD YOUR STATIC IP PHOTO HERE]**
 
-## 💡 Key Learnings
-* Configuring BIOS/UEFI settings for virtualization.
-* Managing virtual hardware resources.
-* Windows Server installation and Administrator account security.
+### Step 2: AD DS Installation & Forest Promotion
+* **The Action:** Installed the Active Directory Domain Services role and promoted the server to a Domain Controller for the `IAMLAB.local` forest.
+* **The "Why":** Promoting the server creates the NTDS database, which acts as the centralized "brain" for all user identities and security permissions in the network.
+* **[ADD YOUR "IAMLAB\ADMINISTRATOR" LOGIN PHOTO HERE]**
+
+---
+
+## 👤 Phase 2: Identity & Access Management (IAM)
+
+### Step 3: Organizational Unit (OU) Design
+* **The Action:** Designed a departmental hierarchy by creating OUs for `_Employees`, `HR`, `IT`, and `Finance`.
+* **The "Why":** Proper OU design allows for "Delegated Administration." It enables us to apply specific security rules (GPOs) to one department without affecting others.
+* **[ADD YOUR PHOTO OF THE FOLDER TREE/OU STRUCTURE HERE]**
+
+### Step 4: User Provisioning & RBAC
+* **The Action:** Created a test user (`John Doe`) and mapped them to a specific Security Group: `HR_Staff_SG`.
+* **The "Why":** This follows **Role-Based Access Control (RBAC)**. Instead of giving John Doe individual permissions, we give the *Group* permissions. This makes it easier to "offboard" users or change permissions for entire departments instantly.
+* **[ADD YOUR PHOTO OF JOHN DOE INSIDE THE SECURITY GROUP HERE]**
+
+---
+
+## 🔐 Phase 3: Security Governance & Data Protection
+
+### Step 5: Enforcing Security Baselines (Group Policy)
+* **The Action:** Used the Group Policy Management Console (GPMC) to enforce a **12-character minimum password length** domain-wide.
+* **The "Why":** Centralized governance ensures that every user, regardless of department, follows company security standards to prevent "brute force" password attacks.
+* **[ADD YOUR PHOTO OF THE PASSWORD POLICY/GPO SCREEN HERE]**
+
+### Step 6: NTFS Permissions (Least Privilege)
+* **The Action:** Created a folder (`HR_Private`) and modified the security ACLs to grant "Modify" access only to the `HR_Staff_SG` group.
+* **The "Why":** This implements the **Principle of Least Privilege**. Only users who *need* access to HR data for their jobs can see it; everyone else (including IT admins, ideally) is locked out.
+* **[ADD YOUR PHOTO OF THE FOLDER SECURITY TAB HERE]**
+
+---
+
+## 🎯 Key Takeaways for Interviewers
+* **Identity Lifecycle:** I can manage the "Joiner-Mover-Leaver" process by provisioning users and managing groups.
+* **Security First:** I understand how to enforce global security rules using Group Policy.
+* **Data Integrity:** I know how to secure sensitive corporate data using NTFS permissions and group-based access.
 
