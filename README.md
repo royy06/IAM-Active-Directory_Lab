@@ -36,7 +36,7 @@ This project demonstrates the end-to-end deployment of a Windows Server-based id
 * **The Action:** Designed a departmental hierarchy by creating OUs for `_Employees`, `HR`, `IT`, and `Finance`.
 * **The "Why":** Proper OU design allows for "Delegated Administration." It enables us to apply specific security rules (GPOs) to one department without affecting others.
 
-![OU Structure](screenshots/OU%20structure.png)
+![User inside security group](screenshots/User%20inside%20security%20group.png)
 
 
 
@@ -44,8 +44,8 @@ This project demonstrates the end-to-end deployment of a Windows Server-based id
 * **The Action:** Created a test user (`John Doe`) and mapped them to a specific Security Group: `HR_Staff_SG`.
 * **The "Why":** This follows **Role-Based Access Control (RBAC)**. Instead of giving John Doe individual permissions, we give the *Group* permissions. This makes it easier to "offboard" users or change permissions for entire departments instantly.
 
-![User inside security group](screenshots/User%20inside%20security%20group.png)
 
+![OU Structure](screenshots/OU%20structure.png)
 
 
 
